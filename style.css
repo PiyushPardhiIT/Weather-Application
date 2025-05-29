@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    transition: background 0.5s;
+}
+
+/* Default background (fallback) */
+body.default-bg {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+/* Sunny/Clear */
+body.sunny-bg {
+    background: linear-gradient(135deg, #ffe259 0%, #ffa751 100%);
+}
+
+/* Rainy */
+body.rainy-bg {
+    background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+}
+
+/* Cold/Snowy */
+body.cold-bg {
+    background: linear-gradient(135deg, #83a4d4 0%, #b6fbff 100%);
+}
+
+/* thuderstorm */
+body.thunder-bg {
+    background: linear-gradient(135deg, #232526 0%, #414345 60%, #0f2027 100%);
+}
+
+.container {
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather_container {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.temp p {
+    font-size: 4.5em;
+    font-weight: bold;
+}
+
+.time_location p {
+    font-size: 1.5rem;
+}
+
+.condition {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#condition-label {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+#weatherIcon {
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+
+#tempState {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0.2rem;
+}
+
+nav form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search_area {
+    padding: 0.7rem 1rem;
+    outline: none;
+    border: none;
+    color: #333;
+    background-color: #fff;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+#searchButton {
+    padding: 0.7rem 1.5rem;
+    background-color: #2575fc;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#searchButton:hover {
+    background-color: #6a11cb;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem 0.5rem;
+        max-width: 98vw;
+    }
+    .temp p {
+        font-size: 2.5em;
+    }
+    .time_location p {
+        font-size: 1.1rem;
+    }
+    .condition {
+        font-size: 1rem;
+    }
+    nav form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #searchButton, .search_area {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
